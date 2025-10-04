@@ -1,3 +1,4 @@
+![CI](https://github.com/ashleynikolenko/selenium-pytest-starter/actions/workflows/tests.yml/badge.svg)
 # Selenium + Pytest Starter
 
 This is a starter project for writing automated tests with [Selenium](https://www.selenium.dev/) and [Pytest](https://docs.pytest.org/).

@@ -1,0 +1,37 @@
+name: CI - Pytest (Selenium)
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      # Install Google Chrome on the runner
+      - name: Install Google Chrome
+        uses: browser-actions/setup-chrome@v1
+
+      - name: Show Chrome version
+        run: |
+          which chrome || true
+          chrome --version || google-chrome --version || chromium --version || true
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run tests (headless)
+        env:
+          PYTHONWARNINGS: ignore
+        run: pytest -q

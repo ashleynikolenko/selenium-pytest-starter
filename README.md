@@ -7,8 +7,8 @@ This is a starter project for writing automated tests with [Selenium](https://ww
 Clone this repo and create a virtual environment (optional but recommended):
 
 ```bash
-git clone https://github.com/<your-username>/<your-repo-name>.git
-cd <your-repo-name>
+git clone https://github.com/ashleynikolenko/selenium-pytest-starter.git
+cd selenium-pytest-starter
 python3 -m venv .venv
 source .venv/bin/activate   # On Windows use .venv\Scripts\activate
 pip install -r requirements.txt
